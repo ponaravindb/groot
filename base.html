@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Project 1</title>
+        <link href="fontawesome/css/all.css" rel="stylesheet" />
+        <link rel="stylesheet" href="normalize.css" />
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <script>
+        function reveal(show) {
+            var el = document.getElementById("reveal");
+            if (show) {
+                el.style.opacity = "1";
+                document.getElementById("scroll").scrollIntoView({
+                    behavior: "smooth",
+                    block: "start",
+                    inline: "nearest"
+                });
+            } else el.style.opacity = "0";
+        }
+    </script>
+    <body>
+        <header>
+            <i class="fab fa-facebook-square"></i>
+            <input id="title" value="My favorite story..." />
+        </header>
+        <main>
+            <span id="postsTag">or well... favorite coding story at least</span>
+            <div class="post-container">
+                <div class="post-meta">
+                    <div class="meta-profile user"><div class=""></div></div>
+                    <div class="meta-title">
+                        <span class="post-title">Front-end Fundamentals</span>
+                        <span class="post-time">6 June at 17:10</span>
+                    </div>
+                </div>
+                <div class="post-body">
+                    <p>
+                        Some years ago I was struggling to grasp the concepts of Closures in javascript, so obviously
+                        like any self-respecting developer I went to the
+                        <a href="https://stackoverflow.com/">StackOverflow</a>. It is there that I've found this
+                        <b>GEM</b> that I want to share with you.
+                    </p>
+                    <p>
+                        The topic of closures in javascript is one of those things that confuses most developers not
+                        familiar with either the language or the topic itself. Seeing as how most developers now-a-days
+                        actually meet this concept for the first time within the javascript, this doubles down on the
+                        issue. So, I have, like many before me, went down that road and on the road to discover found
+                        plent of answers, none of which
+                        <span class="emphasize">made any sense whatsoever!</span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="post-container">
+                <div class="post-meta">
+                    <div class="meta-profile wikipedia"><div class="active"></div></div>
+                    <div class="meta-title">
+                        <span class="post-title">Wikipedia</span>
+                        <span class="post-time">6 June at 17:37</span>
+                    </div>
+                </div>
+                <div class="post-body">
+                    <p>
+                        In programming languages, a closure, also lexical closure or function closure, is a technique
+                        for implementing lexically scoped name binding in a language with first-class functions.
+                        Operationally, a closure is a record storing a function together with an environment. The
+                        environment is a mapping associating each free variable of the function (variables that are used
+                        locally, but defined in an enclosing scope) with the value or reference to which the name was
+                        bound when the closure was created. Unlike a plain function, a closure allows the function to
+                        access those captured variables through the closure's copies of their values or references, even
+                        when the function is invoked outside their scope.
+                    </p>
+                </div>
+                <div class="post-comments">
+                    <div class="comment-profile user"><div class="active"></div></div>
+                    <div class="comment-body">
+                        <span class="comment-profile-name">Front-end Fundamentals</span>
+                        I mean, just look at that definition, how is a junior developer to understand that?
+                        <div class="comment-controls"><a>Like</a>&nbsp;&nbsp;-&nbsp;&nbsp;<a>Reply</a></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="post-container" id="scroll">
+                <div class="post-meta">
+                    <div class="meta-profile user"><div class=""></div></div>
+                    <div class="meta-title">
+                        <span class="post-title">Front-end Fundamentals</span>
+                        <span class="post-time">6 June at 17:10</span>
+                    </div>
+                </div>
+                <div class="post-body">
+                    <p>
+                        How is any novice programmer to understand that? Half the words mean nothing to someone without
+                        deep knowledge of programing concepts. This is one of the main reasons, or at least I view it as
+                        such, why we find dirty and ugly code in the wilds today. People are not explained the proper
+                        concepts from the start.
+                    </p>
+                    <p>
+                        So let me ask you do you want to see how a proper explenation looks like for someone who doesn't
+                        understand things?
+                    </p>
+                    <div class="poll">
+                        <input id="option-yes" type="radio" name="show-post" hidden onchange="reveal(true);" /><label
+                            for="option-yes"
+                            >Yes</label
+                        >
+                        <input id="option-no" type="radio" name="show-post" hidden onchange="reveal(false);" /><label
+                            for="option-no"
+                            >No</label
+                        >
+                    </div>
+                </div>
+            </div>
+
+            <div id="reveal" class="post-container" style="opacity: 0; transition: all 0.5s">
+                <div class="post-meta">
+                    <div class="meta-profile stackoverflow"><div class="active"></div></div>
+                    <div class="meta-title">
+                        <span class="post-title">Stackoverflow</span>
+                        <span class="post-time">6 June at 20:32</span>
+                    </div>
+                </div>
+                <div class="post-body">
+                    <p>
+                        <a>
+                            https://stackoverflow.com/a/6472397/5715550
+                        </a>
+                    </p>
+                    <img src="resources/princessfull.png" alt="" />
+                </div>
+            </div>
+        </main>
+    </body>
+</html>
